@@ -7,7 +7,7 @@
 3) В тестах использовать аннотации и параметры TestNG. 
 Обязательные: 
 - @BeforeMethod, 
-- @AfterMethod, 
+- @AfterMethod,
 - dataProvider, 
 - запуск в параллели (через .xml файл), 
 - retryAnalyzer, 
