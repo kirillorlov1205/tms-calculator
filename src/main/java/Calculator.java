@@ -1,11 +1,12 @@
-import Utils.Operator;
-import Utils.exceptions.IncorrectOperatorException;
-import Utils.exceptions.ResultLessThanLimitException;
-import Utils.exceptions.ResultMoreThanLimitException;
+import exceptions.IncorrectOperatorException;
+import exceptions.ResultLessThanLimitException;
+import exceptions.ResultMoreThanLimitException;
+import model.Operator;
 
 public class Calculator {
 
-    public Calculator() {}
+    public Calculator() {
+    }
 
     public double calculateByOperator(double num1, double num2, Operator operator) throws ResultMoreThanLimitException,
             ResultLessThanLimitException, IncorrectOperatorException {

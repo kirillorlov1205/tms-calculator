@@ -1,4 +1,4 @@
-package Utils.exceptions;
+package exceptions;
 
 public class IncorrectOperatorException extends Exception {
 

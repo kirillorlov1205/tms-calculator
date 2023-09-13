@@ -1,10 +1,10 @@
-import Utils.Operator;
-import Utils.exceptions.IncorrectOperatorException;
-import Utils.exceptions.ResultLessThanLimitException;
-import Utils.exceptions.ResultMoreThanLimitException;
+import exceptions.IncorrectOperatorException;
+import exceptions.ResultLessThanLimitException;
+import exceptions.ResultMoreThanLimitException;
+import model.Operator;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import support.Retry;
+import utils.Retry;
 
 public class SubtractionTest extends BaseTest {
 

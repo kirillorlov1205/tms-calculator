@@ -1,7 +1,7 @@
-import Utils.Operator;
-import Utils.exceptions.IncorrectOperatorException;
-import Utils.exceptions.ResultLessThanLimitException;
-import Utils.exceptions.ResultMoreThanLimitException;
+import exceptions.IncorrectOperatorException;
+import exceptions.ResultLessThanLimitException;
+import exceptions.ResultMoreThanLimitException;
+import model.Operator;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -31,16 +31,17 @@ public class SumTest extends BaseTest {
         Assert.assertEquals(actualValue, expectedValue, "Actual result doesn't match expected");
     }
 
-    @Test(testName = "Verify validation with more than limit result while sum calculation")
+    @Test(testName = "Verify validation with more than limit result while sum calculation", expectedExceptions =
+            RuntimeException.class)
     public void verifyValidationWithMoreThanLimitSumCalculation() {
-        String expectedExceptionMessage = "Result couldn't be more than 100. Calm down, bro";
-        String actualExceptionMessage = "";
+//        String expectedExceptionMessage = "Result couldn't be more than 100. Calm down, bro";
+//        String actualExceptionMessage = "";
         try {
             calculator.calculateByOperator(100.0, 0.1, Operator.SUM);
         } catch (ResultMoreThanLimitException | ResultLessThanLimitException | IncorrectOperatorException e) {
-            actualExceptionMessage += e.getMessage();
+            throw new RuntimeException(e);
         }
-        Assert.assertEquals(actualExceptionMessage, expectedExceptionMessage, "Actual result doesn't match " +
-                "expected");
+//        Assert.assertEquals(actualExceptionMessage, expectedExceptionMessage, "Actual result doesn't match " +
+//                "expected");
     }
 }

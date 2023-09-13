@@ -1,4 +1,4 @@
-package Utils;
+package model;
 
 public enum Operator {
     DIVISION,

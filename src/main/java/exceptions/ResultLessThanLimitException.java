@@ -1,4 +1,4 @@
-package Utils.exceptions;
+package exceptions;
 
 public class ResultLessThanLimitException extends Exception{
 
