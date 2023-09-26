@@ -6,7 +6,7 @@ public class BaseTest {
 
     protected Calculator calculator;
 
-    @BeforeClass
+    @BeforeClass(groups = "group1")
     public void setup() {
         calculator = new Calculator();
         System.out.println("Fuck testng !!!");
